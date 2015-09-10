@@ -77,7 +77,7 @@ function start(elementID) {
 	
     // Set up to draw the scene periodically.
     
-    setInterval(drawScene, 15);
+    setInterval(drawScene, 5);
     
     
     //Set up Audio Listening Code
@@ -412,7 +412,7 @@ function drawScene() {
   
       var prevHeight = 0;
       var dampening = 4;
-  for (i = 0; i < frequencyData.length; i++) { 
+  for (i = 0; i < frequencyData.length; i+=2) { 
     mvTranslate([0, frequencyData[i]/dampening - prevHeight, 2]);
     
     prevHeight = frequencyData[i]/dampening
